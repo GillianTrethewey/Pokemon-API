@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon API</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">24 Hour Hackathon Project:<br/>PokéChallenge</h1>
+  </header>
+
+  <main class="pokemon__container">
+
+    <section class="pokemon">
+        <h2 class="pokemon__title">Who's that Pokémon?</h2>
+
+        <div class="image-card">
+            <div class="image-card__backdrop">
+                <img class="image-card__image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png">
+            </div>
+        </div>
+
+        <h2 class="pokemon__reveal">Make Your Guess!</h2>
+
+        <div class="guess">
+            <form class="guess__form">
+                <input class="guess__field" type="text">
+                <button class="button--guess" type="submit">Guess</button>
+            </form>
+        </div>
+
+        <section class="stats-card">
+            <h2 class="stats-card__section-title">Hints:</h2>
+            <div class="stats-card__details">
+                <h4 class="stats-card__title">Weight: <span class="stats-card__weight"></span></h4> 
+                <h4 class="stats-card__title">Height: <span class="stats-card__height"></span></h4>
+                <h4 class="stats-card__title">Abilities: <span class="stats-card__ability"></h4>
+            </div>
+        </section>
+    </section>       
+</main>
+
+<footer class="footer">
+
+    <h2 class="footer__title">About The Team</h2>
+
+    <section class="team__container">
+
+      <section class="team__member">
+        <img class="team__member-image" src="./images/silhouette.png" alt="silhouette of a person."/>
+        <h3 class="team__member-name">ASIA MOHAMED<br/>(CSS)</h3>
+        <div class="team__member-link-container">
+          <a class="team__member-link" href="https://github.com/mohamasia"><img class="github-icon" src="./images/github.png" alt="github icon"/></a>
+          <a class="team__member-link" href="https://linkedin.com/in/asia-mohamed"><img class="linkedin-icon" src="./images/linkedin.png" alt="linkedin icon"/></a>
+        </div>
+      </section>
+
+      <section class="team__member">
+        <img class="team__member-image" src="./images/silhouette.png" alt="silhouette of a person."/>
+        <h3 class="team__member-name">ELYSE DESROCHERS<br/>(DESIGN, CSS)</h3>
+        <div class="team__member-link-container">
+          <a class="team__member-link" href="https://github.com/elysedes"><img class="github-icon" src="./images/github.png" alt="github icon"/></a>
+          <a class="team__member-link" href="https://linkedin.com/in/elyse-d"><img class="linkedin-icon" src="./images/linkedin.png" alt="linkedin icon"/></a>
+        </div>
+      </section>
+
+      <section class="team__member">
+        <img class="team__member-image" src="./images/silhouette.png" alt="silhouette of a person."/>
+        <h3 class="team__member-name">GILLIAN TRETHEWEY<br/>(JS, API)</h3>
+        <div class="team__member-link-container">
+          <a class="team__member-link" href="https://github.com/GillianTrethewey"><img class="github-icon" src="./images/github.png" alt="github icon"/></a>
+          <a class="team__member-link" href="https://www.linkedin.com/in/gillian-trethewey/"><img class="linkedin-icon" src="./images/linkedin.png" alt="linkedin icon"/></a>
+        </div>
+      </section>
+    </section>
+    <p>PokeChallenge.app © 2024</p>
+  </footer>
+    
+</body>
+</html>
+

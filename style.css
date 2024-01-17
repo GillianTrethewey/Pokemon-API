@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "Nerko One";
+  src: url("./fonts/NerkoOne-Regular.woff2") format("woff2"), url("../../fonts/NerkoOne-Regular.woff") format("woff"), url("../../fonts/NerkoOne-Regular.otf") format("opentype");
+  font-weight: regular;
+}
+@font-face {
+  font-family: "Nanum Gothic";
+  src: url("./fonts/NanumGothic.woff2") format("woff2"), url("../../fonts/NanumGothic.woff") format("woff"), url("../../fonts/NanumGothic-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Nanum Gothic";
+  src: url("./fonts/NanumGothicBold.woff2") format("woff2"), url("../../fonts/NanumGothicBold.woff") format("woff"), url("../../fonts/NanumGothic-Bold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Nanum Gothic";
+  src: url("./fonts/NanumGothicExtraBold.woff2") format("woff2"), url("../../fonts/NanumGothicExtraBold.woff") format("woff"), url("../../fonts/NanumGothic-ExtraBold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Gothic", arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: 0;
+  color: #2D2D2D;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  background-color: #DEFFB5;
+  height: 200px;
+}
+@media (min-width: 48rem) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+  }
+}
+.header__title {
+  text-align: center;
+  font-family: "Nerko One", Courier, serif;
+  color: #FF6767;
+  margin: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 3rem;
+}
+
+.pokemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem auto;
+  border: 3px solid #07D5F1;
+}
+@media (min-width: 48rem) {
+  .pokemon {
+    margin: 2rem auto;
+    padding-bottom: 2rem;
+  }
+}
+.pokemon__container {
+  margin: 0 1rem;
+}
+.pokemon__title {
+  text-align: center;
+  font-family: "Nerko One", Courier, serif;
+  color: #FF6767;
+  margin: 2rem 0;
+  font-size: 3rem;
+}
+.pokemon__reveal {
+  text-align: center;
+  font-family: "Nerko One", Courier, serif;
+  color: #FF6767;
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+.image-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 2rem;
+}
+.image-card__backdrop {
+  border-radius: 50%;
+  background-color: #DEFFB5;
+}
+.image-card__image {
+  width: 300px;
+  height: auto;
+  image-rendering: pixelated;
+  filter: brightness(0%);
+}
+.image-card__image--revealed {
+  width: 300px;
+  height: auto;
+  image-rendering: pixelated;
+  filter: brightness(100%);
+}
+
+.guess {
+  margin: 1rem;
+}
+.guess__form {
+  width: 85vw;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+@media (min-width: 48rem) {
+  .guess__form {
+    width: 50%;
+  }
+}
+.guess__form__field {
+  background-color: #FAFFC6;
+  border-radius: 4px;
+  border: 2px solid #FF6767;
+  color: #2D2D2D;
+  width: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.stats-card {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #FAFFC6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.stats-card__details{
+  width: 400px;
+  padding: 2rem;
+}
+@media (min-width: 48rem) {
+  .stats-card__details {
+    margin: 0 auto;
+  }
+}
+.stats-card__section-title, .stats-card__title {
+  font-family: "Nerko One", Courier, serif;
+  color: #FF6767;
+  margin: 0;
+  font-size: 1.5rem;
+}
+.stats-card__section-title {
+  text-align: center;
+  font-size: 2rem;
+}
+.stats-card__weight,
+.stats-card__height,
+.stats-card__ability {
+  font-family: "Nerko One", Courier, serif;
+  color: #FF6767;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.button--start,
+.button--guess {
+  background-color: #FF6767;
+  color: #FFFFFF;
+  font-family: "Nanum Gothic", arial, sans-serif;
+  font-weight: 600;
+  border-radius: 4px;
+  border-style: none;
+  padding: 0.5rem 2rem;
+  margin: 0 1rem;
+}
+
+.button--guess {
+  margin: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.footer {
+  background-color: #DEFFB5;
+  color: #07D5F1;
+  padding: 4rem 1rem 2rem 1rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 48rem) {
+  .footer {
+    flex-direction: column;
+  }
+}
+.footer__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 800;
+  margin: 0;
+  margin-bottom: 2rem;
+  font-family: "Nerko One", Courier, serif;
+  color: #FF6767;
+  font-size: 3rem;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 700px;
+}
+@media (min-width: 48rem) {
+  .team__container {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+.team__member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FAFFC6;
+  width: 80%;
+  margin-bottom: 3rem;
+  max-width: 300px;
+}
+@media (min-width: 48rem) {
+  .team__member {
+    width: 30%;
+  }
+}
+.team__member-image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+  padding: 2rem;
+  margin-bottom: 0;
+}
+.team__member-name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-family: "Nerko One", Courier, serif;
+}
+@media (min-width: 48rem) {
+  .team__member-name {
+    font-size: 1.5rem;
+  }
+}
+.team__member-link-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+.team__member-link {
+  text-decoration: none;
+}
+
+.github-icon,
+.linkedin-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s;
+}
+.github-icon:hover,
+.linkedin-icon:hover {
+  transform: scale(1.25);
+}
+
